@@ -10,47 +10,47 @@ import { motion } from "framer-motion";
 
 
 export const LogoTicker = () => {
-  return <div className="w-full h-full flex overflow-hidden">
+  return <div className="w-full h-1/2 flex overflow-hidden " >
     <motion.div 
-      className="flex flex-none" 
+      className="flex flex-none " 
       animate={{ x: "-100%" }} 
       transition={{ duration: 55, repeat: Infinity, ease: "linear", repeatType: "loop" }}
     >
-      <div className="w-[648px] h-[648px] flex items-center justify-center flex-shrink-0">
+      <div className="w-[648px] h-[220px] flex items-center justify-start flex-shrink-0  rounded-3xl">
         <Image src={acme} alt="acme" className="logo-ticker-image" />
       </div>
-      <div className="w-[648px] h-[648px] flex items-center justify-center flex-shrink-0">
+      {/* <div className="w-[648px] h-[220px] flex items-center justify-start flex-shrink-0  rounded-3xl">
         <Image src={celestial} alt="celestial" className="logo-ticker-image" />
-      </div>
-      <div className="w-[648px] h-[648px] flex items-center justify-center flex-shrink-0">
+      </div> */}
+      <div className="w-[648px] h-[220px] flex items-center justify-start flex-shrink-0  rounded-3xl">
         <Image src={echo} alt="echo" className="logo-ticker-image" />
       </div>
-      <div className="w-[648px] h-[648px] flex items-center justify-center flex-shrink-0">
+      {/* <div className="w-[648px] h-[220px] flex items-center justify-start flex-shrink-0  rounded-3xl">
         <Image src={pulse} alt="pulse" className="logo-ticker-image" />
-      </div>
-      <div className="w-[648px] h-[648px] flex items-center justify-center flex-shrink-0">
+      </div> */}
+      <div className="w-[648px] h-[220px] flex items-center justify-start flex-shrink-0  rounded-3xl">
         <Image src={quantum} alt="quantum" className="logo-ticker-image" />
       </div>
-      <div className="w-[648px] h-[648px] flex items-center justify-center flex-shrink-0">
+      <div className="w-[648px] h-[220px] flex items-center justify-start flex-shrink-0  rounded-3xl">
         <Image src={apex} alt="apex" className="logo-ticker-image" />
       </div>
 
-      <div className="w-[648px] h-[448px] flex items-center justify-center flex-shrink-0">
+      <div className="w-[648px] h-[220px] flex items-center justify-start flex-shrink-0  rounded-3xl">
         <Image src={acme} alt="acme" className="logo-ticker-image" />
       </div>
-      <div className="w-[648px] h-[648px] flex items-center justify-center flex-shrink-0">
+      {/* <div className="w-[648px] h-[220px] flex items-center justify-start flex-shrink-0  rounded-3xl">
         <Image src={celestial} alt="celestial" className="logo-ticker-image" />
-      </div>
-      <div className="w-[648px] h-[648px] flex items-center justify-center flex-shrink-0">
+      </div> */}
+      <div className="w-[648px] h-[220px] flex items-center justify-start flex-shrink-0  rounded-3xl">
         <Image src={echo} alt="echo" className="logo-ticker-image" />
       </div>
-      <div className="w-[648px] h-[648px] flex items-center justify-center flex-shrink-0">
+      {/* <div className="w-[648px] h-[220px] flex items-center justify-start flex-shrink-0  rounded-3xl">
         <Image src={pulse} alt="pulse" className="logo-ticker-image" />
-      </div>
-      <div className="w-[648px] h-[648px] flex items-center justify-center flex-shrink-0">
+      </div> */}
+      <div className="w-[648px] h-[220px] flex items-center justify-start flex-shrink-0  rounded-3xl">
         <Image src={quantum} alt="quantum" className="logo-ticker-image" />
       </div>
-      <div className="w-[648px] h-[648px] flex items-center justify-center flex-shrink-0">
+      <div className="w-[648px] h-[220px] flex items-center justify-start flex-shrink-0  rounded-3xl">
         <Image src={apex} alt="apex" className="logo-ticker-image" />
       </div>
     </motion.div>

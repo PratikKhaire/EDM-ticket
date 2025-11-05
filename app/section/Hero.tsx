@@ -21,11 +21,11 @@ export const Hero = () => {
 
   const translateY = useTransform(scrollYProgress, [0,1],[150 ,-150])
 
-  return <section  ref={heroRef} className=" pt-4 pb-0  md:pt-5 md:pb-10  overflow-x-clip bg-light">
-    <div className="container lg:px-0">
-      <div className="md:flex items-center justify-between gap-16">
+  return <section  ref={heroRef} className=" pt-0 pb-0  md:pt-5  overflow-hidden h-[85vh] bg-light">
+    <div className="container lg:px-0 ">
+      <div className="md:flex items-center justify-between gap-16 bg-red-00">
 
-        <div className="hidden md:flex md:order-2 md:w-1/2 md:h-[648px] relative items-center justify-center">
+        <div className="hidden md:flex md:order-2 md:w-[660px]  md:h-[448px] relative items-center justify-center">
          <LogoTicker/>
         </div>
 
@@ -33,7 +33,7 @@ export const Hero = () => {
         <div className="md:order-1 md:w-1/2 md:max-w-[580px]">
           <div>
             <div className="text-sm border border-[#222]/10 inline-flex px-3 py-1 rounded-lg tracking-tight">Version 2.0 is here</div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6"> Buy or Sell <br /> Rave & EDM Tickets</h1>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#6f0080] text-transparent bg-clip-text mt-6"> Buy or Sell <br /> Rave & EDM Tickets</h1>
             
             <p className="text-xl text-[#010D3E] tracking-tight mt-6 ">Easy, secure, and hassle-free transactions powered by
                 community-generated reviews and ratings..</p>
@@ -44,8 +44,8 @@ export const Hero = () => {
             <LogoTicker/>
           </div>
           
-          <div className="mt-7 flex gap-1 items-center">
-            <button className="btn btn-primary">Join the Party</button>
+          <div className="mt-7 flex items-center  justify- ">
+            <button className="btn btn-primary ">Join the Party</button>
            
           </div>
         </div>
