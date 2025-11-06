@@ -56,3 +56,56 @@ radial-gradient(at 100% 45%, hsla(204,100%,85%,1) 0px, transparent 50%);
 }
 
 
+@layer components {
+    .message-section {
+        @apply min-h-dvh bg-[#F5F5DC];
+    }
+
+    .message-text-scroll {
+        @apply rotate-[-3deg] md:translate-y-5 border-[.5vw] border-[#F5F5DC] absolute z-10;
+    }
+
+    .first-text-split h1 {
+        @apply md:text-center text-[#3E2723] text-4xl md:text-6xl font-bold;
+    }
+
+    .second-text-split h1 {
+        @apply md:text-center text-4xl md:text-6xl font-bold;
+    }
+
+    .slider-wrapper {
+        @apply lg:h-dvh min-h-dvh md:min-h-fit w-full mt-0 md:mt-20 xl:mt-0;
+    }
+
+    .flavors {
+        @apply h-full w-full flex md:flex-row flex-col items-center 2xl:gap-72 lg:gap-52 md:gap-24 gap-7 flex-nowrap;
+    }
+
+    .flavors .drinks {
+        @apply absolute left-1/2 -translate-x-1/2 bottom-0 md:h-full h-80;
+    }
+
+    .flavors .elements {
+        @apply absolute md:top-0 md:bottom-auto bottom-10 w-full;
+    }
+
+    .flavors h1 {
+        @apply absolute md:bottom-10 md:left-10 bottom-5 left-5 text-[#F5F5DC] md:text-6xl text-3xl font-semibold uppercase tracking-tighter;
+    }
+
+    .bg-mid-brown {
+        @apply bg-[#6D4C41];
+    }
+
+    .text-milk {
+        @apply text-[#F5F5DC];
+    }
+
+    .general-title {
+        @apply flex flex-col items-center justify-center;
+    }
+
+    .col-center {
+        @apply flex flex-col items-center;
+    }
+}

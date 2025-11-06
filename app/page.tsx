@@ -1,15 +1,37 @@
-import Head from 'next/head'
+"use client"
+
 import React from 'react'
 import { Header } from './section/header'
 import { Hero } from './section/Hero'
+import Message from './section/Message'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollSmoother, ScrollTrigger } from 'gsap/all'
 
-const page = () => {
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+const Page = () => {
+
+ useGSAP(() => {
+    ScrollSmoother.create({
+      smooth: 3,
+      effects: true,
+    })
+  })
+
   return (
-    <div className="font-sora">
-      <Header/>
-      <Hero/>
-    </div>
+    <>
+     <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <div className="font-sora">
+          <Header/>
+          <Hero/>
+        </div>  
+        <Message/>
+      </div>
+     </div>
+    </>
   )
 }
 
-export default page
+export default Page

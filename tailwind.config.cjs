@@ -10,8 +10,14 @@ module.exports = {
       sm: "375px",
       md: "768px",
       lg: "1200px",
+      xl: "1440px",
+      "2xl": "1536px",
     },
     extend: {
+      colors: {
+        milk: "#F5F5DC", // Beige/cream color
+        "dark-brown": "#3E2723", // Dark brown color
+      },
       container: {
         center: true,
         padding: {
