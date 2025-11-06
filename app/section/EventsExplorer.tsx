@@ -154,7 +154,6 @@ const EventCategoryCard = ({ category }: EventCategoryCardProps) => {
           p-6 md:p-8
         `}
       >
-        {/* Glassmorphism Background with Gradient */}
         <div 
           className={`
             absolute inset-0 

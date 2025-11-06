@@ -1,6 +1,8 @@
 import React from 'react'
 import FlavorTitle from '../components/FlavorTitle'
 import FlavorSlider from '../components/FlavorSlider'
+import ArtistsSection from './ArtistsSection'
+import EventBrowse from './EventBrowse'
 
 const Message = () => {
   return (
@@ -15,8 +17,7 @@ const Message = () => {
             </div>
         </div>
       </section>
-      
-      {/* Events Explorer Section */}
+     
       
     </>
   )
