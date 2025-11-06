@@ -79,6 +79,16 @@ radial-gradient(at 100% 45%, hsla(204,100%,85%,1) 0px, transparent 50%);
 @layer components {
     .message-section {
         @apply min-h-dvh bg-[#F5F5DC];
+        background-color: #F5F5DC !important;
+        position: relative;
+    }
+    
+    .message-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #F5F5DC;
+        z-index: -1;
     }
 
     .message-text-scroll {
@@ -86,11 +96,15 @@ radial-gradient(at 100% 45%, hsla(204,100%,85%,1) 0px, transparent 50%);
     }
 
     .first-text-split h1 {
-        @apply md:text-center text-[#3E2723] text-4xl md:text-6xl font-bold;
+        @apply md:text-center text-[#3E2723] text-5xl md:text-7xl lg:text-8xl font-extrabold uppercase tracking-tighter;
     }
 
     .second-text-split h1 {
-        @apply md:text-center text-4xl md:text-6xl font-bold;
+        @apply md:text-center text-[#3E2723] text-5xl md:text-7xl lg:text-8xl font-extrabold uppercase tracking-tighter;
+    }
+    
+    .flavor-text-scroll h2 {
+        @apply text-center text-[#F5F5DC] text-5xl md:text-7xl lg:text-8xl font-extrabold uppercase tracking-tighter;
     }
 
     .slider-wrapper {
@@ -147,5 +161,114 @@ radial-gradient(at 100% 45%, hsla(204,100%,85%,1) 0px, transparent 50%);
 
     .animate-fade-in {
         animation: fade-in 0.6s ease-out forwards;
+    }
+
+    /* Enhanced fade-in with scale for artist cards */
+    @keyframes fadeInScale {
+        0% {
+            opacity: 0;
+            transform: scale(0.8) translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    /* Slow spin animation for gradient overlay */
+    @keyframes spin-slow {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .animate-spin-slow {
+        animation: spin-slow 8s linear infinite;
+    }
+
+    /* Floating animation for cards */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    /* 3D Cover Flow Styles */
+    .coverflow-card {
+        position: absolute;
+        width: 240px;
+        height: 340px;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 
+            0 25px 50px -12px rgba(139, 92, 246, 0.4),
+            0 0 40px rgba(236, 72, 153, 0.3),
+            0 10px 30px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transform-style: preserve-3d;
+    }
+
+    .coverflow-card-center {
+        z-index: 10;
+        box-shadow: 
+            0 35px 60px -15px rgba(139, 92, 246, 0.6),
+            0 0 60px rgba(236, 72, 153, 0.5),
+            0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .coverflow-card:hover {
+        transform: translateX(0) translateZ(150px) rotateY(0deg) scale(1.15) !important;
+        z-index: 50;
+        box-shadow: 
+            0 40px 80px -20px rgba(139, 92, 246, 0.8),
+            0 0 80px rgba(236, 72, 153, 0.7),
+            0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .coverflow-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(3px) brightness(0.85);
+        transition: filter 0.6s ease;
+    }
+
+    .coverflow-card-center .coverflow-image {
+        filter: blur(0px) brightness(1);
+    }
+
+    .coverflow-card:hover .coverflow-image {
+        filter: blur(0px) brightness(1.1);
+    }
+
+    /* Reflection Styles */
+    .coverflow-card-reflection {
+        position: absolute;
+        width: 240px;
+        height: 340px;
+        border-radius: 20px;
+        overflow: hidden;
+        pointer-events: none;
+        transform-style: preserve-3d;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 60%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 60%);
+    }
+
+    .coverflow-image-reflection {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(2px) brightness(0.6);
     }
 }

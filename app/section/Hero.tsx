@@ -13,9 +13,142 @@ export const Hero = () => {
     <div className="max-w-[1400px] mx-auto w-full px-8 md:px-16 lg:px-24 xl:px-32 py-16 md:py-20">
       <div className="md:flex items-center justify-between gap-12 lg:gap-16">
 
-        {/* Logo Ticker - Order 2 on desktop */}
+        {/* 3D Cover Flow Gallery - Order 2 on desktop */}
         <div className="hidden md:flex md:order-2 md:w-[660px] md:h-[448px] relative items-center justify-center flex-shrink-0">
-         <LogoTicker/>
+          {/* 3D Perspective Container */}
+          <div className="relative w-full h-full" style={{ perspective: '1200px' }}>
+            {/* Cards Container */}
+            <div className="absolute inset-0 flex items-center justify-center" style={{ transformStyle: 'preserve-3d' }}>
+              {/* Card 1 - Far Left */}
+              <div 
+                className="coverflow-card group"
+                style={{ 
+                  transform: 'translateX(-280px) translateZ(-200px) rotateY(45deg)',
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/Events/image_2.png"
+                  alt="Event 1"
+                  className="coverflow-image"
+                />
+              </div>
+
+              {/* Card 2 - Mid Left */}
+              <div 
+                className="coverflow-card group"
+                style={{ 
+                  transform: 'translateX(-140px) translateZ(-100px) rotateY(25deg)',
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/Events/image_4.png"
+                  alt="Event 2"
+                  className="coverflow-image"
+                />
+              </div>
+
+              {/* Card 3 - Center (Featured) */}
+              <div 
+                className="coverflow-card coverflow-card-center group"
+                style={{ 
+                  transform: 'translateX(0) translateZ(50px) rotateY(0deg)',
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/Events/image_6.png"
+                  alt="Event 3"
+                  className="coverflow-image"
+                />
+              </div>
+
+              {/* Card 4 - Mid Right */}
+              <div 
+                className="coverflow-card group"
+                style={{ 
+                  transform: 'translateX(140px) translateZ(-100px) rotateY(-25deg)',
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/Events/image_8.png"
+                  alt="Event 4"
+                  className="coverflow-image"
+                />
+              </div>
+
+              {/* Card 5 - Far Right */}
+              <div 
+                className="coverflow-card group"
+                style={{ 
+                  transform: 'translateX(280px) translateZ(-200px) rotateY(-45deg)',
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/Events/image_10.png"
+                  alt="Event 5"
+                  className="coverflow-image"
+                />
+              </div>
+            </div>
+
+            {/* Floor Reflection */}
+            <div className="absolute inset-0 flex items-center justify-center top-[50%]" style={{ transformStyle: 'preserve-3d', transform: 'scaleY(-1)', opacity: 0.3 }}>
+              {/* Reflected Cards */}
+              <div 
+                className="coverflow-card-reflection"
+                style={{ 
+                  transform: 'translateX(-280px) translateZ(-200px) rotateY(45deg)',
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/Events/image_2.png" alt="" className="coverflow-image-reflection" />
+              </div>
+
+              <div 
+                className="coverflow-card-reflection"
+                style={{ 
+                  transform: 'translateX(-140px) translateZ(-100px) rotateY(25deg)',
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/Events/image_4.png" alt="" className="coverflow-image-reflection" />
+              </div>
+
+              <div 
+                className="coverflow-card-reflection"
+                style={{ 
+                  transform: 'translateX(0) translateZ(50px) rotateY(0deg)',
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/Events/image_6.png" alt="" className="coverflow-image-reflection" />
+              </div>
+
+              <div 
+                className="coverflow-card-reflection"
+                style={{ 
+                  transform: 'translateX(140px) translateZ(-100px) rotateY(-25deg)',
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/Events/image_8.png" alt="" className="coverflow-image-reflection" />
+              </div>
+
+              <div 
+                className="coverflow-card-reflection"
+                style={{ 
+                  transform: 'translateX(280px) translateZ(-200px) rotateY(-45deg)',
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/Events/image_10.png" alt="" className="coverflow-image-reflection" />
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Text Content - Shows first on mobile, Order 1 on desktop */}

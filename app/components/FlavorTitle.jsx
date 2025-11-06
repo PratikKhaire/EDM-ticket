@@ -27,7 +27,7 @@ const FlavorTitle = () => {
       duration: 1,
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       scrollTrigger: {
-        trigger: ".flavor-section",
+        trigger: ".message-section",
         start: "top 10%",
       },
     });
@@ -37,7 +37,7 @@ const FlavorTitle = () => {
       stagger: 0.02,
       ease: "power1.inOut",
       scrollTrigger: {
-        trigger: ".flavor-section",
+        trigger: ".message-section",
         start: "top 1%",
       },
     });
@@ -46,7 +46,7 @@ const FlavorTitle = () => {
   return (
     <div className="general-title col-center h-full 2xl:gap-32 xl:gap-24 gap-16">
       <div className="overflow-hidden 2xl:py-0 py-3 first-text-split">
-        <h1>We have 6</h1>
+        <h1>No more excuses,</h1>
       </div>
 
       <div
@@ -55,13 +55,13 @@ const FlavorTitle = () => {
         }}
         className="flavor-text-scroll"
       >
-        <div className="bg-mid-brown pb-5 2xl:pt-0 pt-3 2xl:px-5 px-3">
-          <h2 className="text-milk">freaking</h2>
+        <div className="bg-[#6D4C41] pb-5 2xl:pt-0 pt-3 2xl:px-5 px-3 rotate-[-3deg] md:translate-y-5 border-[.5vw] border-[#F5F5DC]">
+          <h2>you&apos;re coming</h2>
         </div>
       </div>
 
       <div className="overflow-hidden 2xl:py-0 py-3 second-text-split">
-        <h1>delicious flavors</h1>
+        <h1>out tonight.</h1>
       </div>
     </div>
   );

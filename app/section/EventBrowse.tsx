@@ -11,17 +11,16 @@ const EventBrowse = () => {
   const [selectedCity, setSelectedCity] = useState("New York");
 
   return (
-    <section className="section-wrapper bg-gradient-to-b from-white via-indigo-50 to-purple-900 py-16 md:py-20 lg:py-24">
+    <section className="section-wrapper  bg-light py-16 md:py-20 lg:py-24">
       <div className="section-container">
         {/* Section Header */}
         <div className="mb-10">
           {/* Title and Cities */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
               Browse Events in{" "}
-              <span className="relative inline-block">
+              <span className="relative inline-block bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
                 {selectedCity}
-                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-white to-pink-500 rounded-full"></div>
               </span>
             </h2>
 
@@ -31,10 +30,10 @@ const EventBrowse = () => {
                 <button
                   key={city}
                   onClick={() => setSelectedCity(city)}
-                  className={`px-5 py-2 rounded-full font-medium text-sm transition-all duration-300 ${
+                  className={`px-5 py-2 rounded-full font-medium text-xl transition-all duration-300 ${
                     selectedCity === city
                       ? "bg-white text-purple-900 shadow-lg shadow-purple-500/50"
-                      : "bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm"
+                      : "bg-white/10 text-black hover:bg-white/20 backdrop-blur-sm"
                   }`}
                 >
                   {city}
@@ -48,10 +47,9 @@ const EventBrowse = () => {
             {filters.map((filter, index) => (
               <button
                 key={index}
-                className="flex items-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white rounded-full transition-all duration-300 border border-white/20 hover:border-white/40"
+                className="flex items-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-black rounded-full transition-all duration-300 border border-white/20 hover:border-white/40"
               >
-                <span className="text-lg">{filter.icon}</span>
-                <span className="font-medium text-sm">{filter.label}</span>
+                
               </button>
             ))}
           </div>

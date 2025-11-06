@@ -31,8 +31,8 @@ const Page = () => {
           <Hero/>
         </div>  
         <Message/>
-      <ArtistsSection />
-<EventBrowse />
+        <EventBrowse />
+        <ArtistsSection />
       </div>
      </div>
     </>

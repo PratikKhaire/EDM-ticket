@@ -261,17 +261,10 @@ export const EventsExplorer = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-16 md:mb-20 lg:mb-24 text-center"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#3E2723] mb-4">
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mb-4">
             Explore Events
           </h2>
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: "120px" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="h-1.5 bg-gradient-to-r from-amber-600 to-yellow-500 rounded-full mx-auto"
-          />
-          <p className="mt-6 text-lg md:text-xl text-[#3E2723]/70 max-w-2xl mx-auto">
+          <p className="text-xl text-[#010D3E] tracking-tight mt-6 max-w-2xl mx-auto">
             Discover amazing experiences across all categories
           </p>
         </motion.div>

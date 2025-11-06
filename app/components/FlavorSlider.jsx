@@ -20,14 +20,17 @@ const FlavorSlider = () => {
         scrollTrigger: {
           trigger: ".message-section",
           start: "2% top",
-          end: `+=${scrollAmount + 1500}px`,
+          end: `+=${scrollAmount + 100}px`,
           scrub: true,
           pin: true,
+          pinSpacing: true,
+          markers: false,
+          anticipatePin: 1,
         },
       });
 
-      tl.to(".message-section", {
-        x: `-${scrollAmount + 1500}px`,
+      tl.to(".slider-wrapper", {
+        x: `-${scrollAmount + 100}px`,
         ease: "power1.inOut",
       });
     }
@@ -73,23 +76,14 @@ const FlavorSlider = () => {
             className={`relative lg:w-[50vw] w-96 lg:h-[70vh] md:w-[90vw] md:h-[50vh] h-80 flex-none overflow-hidden ${flavor.rotation || ''}`}
           >
             <img
-              src={`/images/${flavor.color}-bg.svg`}
+              // src={`/images/${flavor.color}-bg.svg`}
+              src={`/images/Events/image_${flavor.num}.png`}
               alt=""
-              className="absolute inset-0 w-full h-full object-contain object-bottom z-0"
+              className="absolute inset-0 w-full h-full object-contain object-bottom z-0   rounded-3xl"
             />
 
-            <img
-              src={`/images/${flavor.color}-drink.webp`}
-              alt={`${flavor.name} drink`}
-              className="drinks"
-            />
 
-            <img
-              src={`/images/${flavor.color}-elements.webp`}
-              alt=""
-              className="elements"
-            />
-
+            
             <h1 className="absolute md:bottom-10 md:left-10 bottom-5 left-5 text-[#F5F5DC] md:text-6xl text-3xl font-semibold uppercase tracking-tighter z-30">
               {flavor.name}
             </h1>
