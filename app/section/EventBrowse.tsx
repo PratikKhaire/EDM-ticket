@@ -232,7 +232,7 @@ const EventBrowse = () => {
 
         {/* Load More Button */}
         <div className="mt-12 text-center">
-          <button className="relative overflow-hidden px-8 py-4 bg-black/30 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
+          <button className="relative overflow-hidden px-8 py-4 bg-white/30 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
             <span className="relative z-10">Load More Events</span>
             <BorderBeam
               duration={4}

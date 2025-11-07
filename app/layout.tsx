@@ -9,7 +9,7 @@ const dmSans = DM_Sans({
   variable: '--font-dm-sans',
 });
 export const metadata: Metadata = {
-  title: "Landing Page",
+  title: "CrowdVolt",
   description: "Pratik Khaire",
 };
 
