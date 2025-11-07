@@ -221,9 +221,29 @@ radial-gradient(at 100% 45%, hsla(204,100%,85%,1) 0px, transparent 50%);
             0 10px 30px rgba(0, 0, 0, 0.3);
         cursor: pointer;
         transform-style: preserve-3d;
-        will-change: transform;
+        will-change: transform, opacity;
         transition: box-shadow 0.3s ease;
         background: transparent;
+    }
+
+    /* Pulse animation for center card hint */
+    @keyframes pulseGlow {
+        0%, 100% {
+            box-shadow: 
+                0 25px 50px -12px rgba(139, 92, 246, 0.4),
+                0 0 40px rgba(236, 72, 153, 0.3),
+                0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        50% {
+            box-shadow: 
+                0 30px 60px -12px rgba(139, 92, 246, 0.6),
+                0 0 60px rgba(236, 72, 153, 0.5),
+                0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    .coverflow-card-3 {
+        animation: pulseGlow 2s ease-in-out infinite;
     }
 
     /* Initial positions for each card - z-index only, GSAP controls transforms */
@@ -272,11 +292,11 @@ radial-gradient(at 100% 45%, hsla(204,100%,85%,1) 0px, transparent 50%);
     }
 
     .coverflow-card-center .coverflow-image {
-        filter: blur(0px) brightness(1);
+        filter: blur(0px) brightness(1) !important;
     }
 
     .coverflow-card:hover .coverflow-image {
-        filter: blur(0px) brightness(1.1);
+        filter: blur(0px) brightness(1.1) !important;
         transform: scale(1.05);
     }
 
