@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    @property --border-angle {
+        syntax: "<angle>";
+        inherits: true;
+        initial-value: 0turn;
+    }
+}
+
 @layer components {
     /* Centered Layout System */
     .section-wrapper {

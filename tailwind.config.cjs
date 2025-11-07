@@ -35,7 +35,23 @@ module.exports = {
       spacing: {
         'section-x': 'clamp(2rem, 5vw, 8rem)',
         'section-y': 'clamp(4rem, 8vw, 10rem)',
-      }
+      },
+      keyframes: {
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
+        "border-spin": {
+          "100%": {
+            "--border-angle": "1turn",
+          },
+        },
+      },
+      animation: {
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        "border-spin": "border-spin 4s linear infinite",
+      },
     },
   },
   plugins: [],

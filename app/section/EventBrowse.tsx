@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import {cities, filters, events} from '@/app/constants/index'
+import { cities, filters, events } from '@/app/constants/index';
+import { BorderBeam } from '@/app/components/ui/border-beam';
  
 // Event data structure
 
@@ -160,8 +161,13 @@ const EventBrowse = () => {
                     </div>
 
                     {/* Book Now Button - Only visible on hover */}
-                    <button className="w-full py-4 bg-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 text-slate-900 hover:text-white font-bold text-lg rounded-2xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl">
-                      Book now
+                    <button className="relative overflow-hidden w-full py-4 bg-white text-slate-900 font-bold text-lg rounded-2xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-2xl">
+                      <span className="relative z-10">Book now</span>
+                      <BorderBeam
+                        duration={4}
+                        colorFrom="#fbbf24"
+                        colorTo="#f59e0b"
+                      />
                     </button>
                   </div>
                 </div>
