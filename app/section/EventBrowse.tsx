@@ -31,9 +31,9 @@ const EventBrowse = () => {
                 <button
                   key={city}
                   onClick={() => setSelectedCity(city)}
-                  className={`px-5 py-2 rounded-full font-medium text-xl transition-all duration-300 ${
+                  className={`px-5 py-2 rounded-lg font-medium text-xl transition-all duration-300 ${
                     selectedCity === city
-                      ? "bg-white text-purple-900 shadow-lg shadow-purple-500/50"
+                      ? "bg-white text-black shadow-sm shadow-purple-500/50"
                       : "bg-white/10 text-black hover:bg-white/20 backdrop-blur-sm"
                   }`}
                 >
@@ -178,8 +178,13 @@ const EventBrowse = () => {
 
         {/* Load More Button */}
         <div className="mt-12 text-center">
-          <button className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-full border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
-            Load More Events
+          <button className="relative overflow-hidden px-8 py-4 bg-black/30 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
+            <span className="relative z-10">Load More Events</span>
+            <BorderBeam
+              duration={4}
+              colorFrom="#fbbf24"
+              colorTo="#f59e0b"
+            />
           </button>
         </div>
       </div>
