@@ -131,8 +131,9 @@ radial-gradient(at 100% 45%, hsla(204,100%,85%,1) 0px, transparent 50%);
 
     @media (max-width: 1024px) {
         .slider-wrapper {
-            width: max-content;
+            width: 100%;
             display: flex;
+            overflow-x: hidden;
         }
     }
 
@@ -142,8 +143,10 @@ radial-gradient(at 100% 45%, hsla(204,100%,85%,1) 0px, transparent 50%);
 
     @media (max-width: 1024px) {
         .flavors {
-            width: max-content;
-            padding-right: 1rem;
+            width: 100%;
+            padding-right: 0;
+            flex-direction: column;
+            gap: 2rem;
         }
     }
 

@@ -27,7 +27,7 @@ const Message = () => {
 
         {/* Slider Section */}
         <div className='h-full flex lg:flex-row flex-col items-center relative overflow-hidden'>
-            <div className="h-full w-full lg:overflow-visible overflow-x-auto lg:pl-20 pl-4 scrollbar-hide">
+            <div className="h-full w-full lg:overflow-visible overflow-hidden lg:pl-20 pl-0 scrollbar-hide">
               <FlavorSlider/>
             </div>
         </div>

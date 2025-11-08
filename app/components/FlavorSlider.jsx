@@ -74,7 +74,7 @@ const FlavorSlider = () => {
         {flavorlists.map((flavor) => (
           <div
             key={flavor.name}
-            className={`relative w-[280px] sm:w-[340px] md:w-[420px] lg:w-[50vw] h-64 sm:h-72 md:h-80 lg:h-[70vh] flex-none overflow-hidden ${flavor.rotation || ''}`}
+            className={`relative w-full sm:w-[340px] md:w-[420px] lg:w-[50vw] h-64 sm:h-72 md:h-80 lg:h-[70vh] flex-none overflow-hidden lg:${flavor.rotation || ''}`}
           >
             <img
               src={`/images/Events/image_${flavor.num}.png`}
